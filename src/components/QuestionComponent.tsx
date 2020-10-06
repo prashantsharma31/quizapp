@@ -45,7 +45,7 @@ export const QuestionComponent = (props: any) => {
              }
         )}
         <div>
-        <button className="btn btn-sm m-1 btn-primary" type="button" onClick= {()=> submit()}> Submit Answer</button>
+        <button className="btn btn-sm m-1 btn-primary" disabled={selection.selectedOption == 0} type="button" onClick= {()=> submit()}> Submit Answer</button>
         <button type="button" className="btn btn-sm m-1 btn-danger" onClick= {()=> handelNextClick()}> Skip Question </button>
 
         </div>

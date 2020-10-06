@@ -24,7 +24,7 @@ const ResultComponent = (state: any) => {
                 <tr>
                     <th>Question</th>
                     <th>Correct Answer</th>
-                    <th>Selectecd Answer</th>
+                    <th>Selected Answer</th>
                     <th></th>
                 </tr>
                 </thead>
