@@ -1,0 +1,51 @@
+{
+    "questions" : [
+        {
+            "id" : 1,
+            "header": "What is the capital of india",
+            "options": [
+                {"id": 1, "text": "Lucknow"},
+                {"id": 2, "text": "Mumbai"},
+                {"id": 3, "text": "New Delhi"},
+                {"id": 4, "text": "None of the above"}
+                ]
+            ,
+            "correctOptions" : 3
+        },
+        {
+            "id" : 2,
+            "header": "What is the output of 2*3",
+            "options": [
+                {"id": 1, "text": "optionss 2"},
+                {"id": 2, "text": "optionss 6"},
+                {"id": 3, "text": "optionss 3"}
+                ]
+            ,
+            "correctOptions" : 2
+        },
+        {
+            "id" : 3,
+            "header": "What is the full form of RAM",
+            "options": [
+                {"id": 1, "text": "Random-access memory"},
+                {"id": 2, "text": "Real-access memory"},
+                {"id": 3, "text": "Rare-access memory"},
+                {"id": 4, "text": "Random-access management"}
+                ]
+            ,
+            "correctOptions" : 1
+        },
+        {
+            "id" : 4,
+            "header": "Select the even number",
+            "options": [
+                {"id": 1, "text": "1"},
+                {"id": 2, "text": "5"},
+                {"id": 3, "text": "3"},
+                {"id": 4, "text": "4"}
+                ]
+            ,
+            "correctOptions" : 4
+        }
+    ]
+}
