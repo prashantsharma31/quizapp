@@ -10,6 +10,11 @@
   pointer-events: none;
 }
 
+.bg-light:hover {
+  background-color: #2153AB !important;
+  color: #fff !important;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

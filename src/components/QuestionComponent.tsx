@@ -20,13 +20,13 @@ export const QuestionComponent = (props: any) => {
         handelClick(question.id,selection.selectedOption,selection.correctOption);
     }
     return (
-    <div className="col-12" id={question.id}>
+    <div className="row p-4" id={question.id}>
        
         <h2 className="col-12 text-left">{question.header}</h2>
         {
         question.options && question.options.map((option: any) => 
              {
-                 return <div className="col-12 " key={option.id}>
+                 return <div className="col-12 col-md-6 " key={option.id}>
                  <label className={(option.id === selection.selectedOption && question.id === selection.id) ?
                         "text-left btn-block btn btn-primary":
                         "text-left btn-block btn bg-light text-primary btn-outline-primary"    
@@ -44,7 +44,7 @@ export const QuestionComponent = (props: any) => {
              </div>
              }
         )}
-        <div>
+        <div className="col-12">
         <button className="btn btn-sm m-1 btn-primary" disabled={selection.selectedOption == 0} type="button" onClick= {()=> submit()}> Submit Answer</button>
         <button type="button" className="btn btn-sm m-1 btn-danger" onClick= {()=> handelNextClick()}> Skip Question </button>
 

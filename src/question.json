@@ -16,9 +16,9 @@
             "id" : 2,
             "header": "What is the output of 2*3",
             "options": [
-                {"id": 1, "text": "optionss 2"},
-                {"id": 2, "text": "optionss 6"},
-                {"id": 3, "text": "optionss 3"}
+                {"id": 1, "text": "2"},
+                {"id": 2, "text": "6"},
+                {"id": 3, "text": "3"}
                 ]
             ,
             "correctOptions" : 2

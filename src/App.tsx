@@ -123,12 +123,20 @@ class App extends Component<MyProps,MyState> {
             {
               this.state.isStarted ?
               <div className="row">
-              
-            {data && <div className="align-left pl-5 font-weight-bold">Question {data.examState.id} test <Timer clickHandler= {()=> this.handelNextClick()}
-             duration={this.state.timerValue} id={this.state.currentQuestion.id}/></div>}
+                <div className="col-12">
+                {data && <div className="align-left font-weight-bold"><span className="float-left pl-3 d-inline-block" >Question {data.examState.id}</span> 
+                <span className="float-right pr-3 d-inline-block">
+                Question <Timer clickHandler= {()=> this.handelNextClick()}
+             duration={this.state.timerValue} id={this.state.currentQuestion.id}/>
+                </span>
+                </div>}
+                </div>
+            
             {
               this.state.currentQuestion && 
-              <QuestionComponent handelClick={this.handelClick} handelNextClick = {()=> this.handelNextClick()} key={this.state.currentQuestion.id} attemptedQuestions={this.state.isQuestionAttempted} question = {this.state.currentQuestion}/>
+              <div className="col-12">
+                <QuestionComponent handelClick={this.handelClick} handelNextClick = {()=> this.handelNextClick()} key={this.state.currentQuestion.id} attemptedQuestions={this.state.isQuestionAttempted} question = {this.state.currentQuestion}/>
+              </div>
            }
            <div className="col-12 mt-3">
             {/* <button type="button" className="btn btn-sm btn-secondary m-1" onClick= {()=> this.handelPreviousClick()}> Previous </button> */}
