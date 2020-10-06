@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 const ResultComponent = (state: any) => {
     let totalQuestions = state.examState.questions;
     let attemptedQuestions = state.examState.attemptedQuestions;
+    let score = 0;
     let resultView = totalQuestions.map((question: any) => {
         let correctOption = question.options.filter((opt: any) =>  opt.id === question.correctOptions);
         let isAttempted = attemptedQuestions.filter((opt: any) => opt.id === question.id);
@@ -11,8 +12,10 @@ const ResultComponent = (state: any) => {
         if(isAttempted.length !== 0) {
             question.isCorrect = isAttempted[0].selectedOption === correctOption[0].id;
             attemptedText = question.options.filter((opt: any) =>  opt.id === isAttempted[0].id)[0].text;
+            if(question.isCorrect) {
+                score = score+25;
+            }
         }
-        debugger
         return {...question,correctAnswer:correctOption[0].text,attemptedText:attemptedText};
     });
     console.log(resultView);
@@ -42,6 +45,9 @@ const ResultComponent = (state: any) => {
         })}
         </tbody>
         </table>
+        <div className="col-12 m-1">
+            You have scored {score}% marks.
+        </div>
         </div>
         </div>
     )
